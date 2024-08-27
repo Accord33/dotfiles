@@ -3,6 +3,8 @@
 unlink ~/.zprofile
 unlink ~/.zshrc
 unlink ~/.gitconfig
-ln ../.zprofile ~/.zprofile
-ln ../.zshrc ~/.zshrc
-ln ../.gitconfig ~/.gitconfig
+unlink ~/.Brewfile
+ln .zprofile ~/.zprofile
+ln .zshrc ~/.zshrc
+ln .gitconfig ~/.gitconfig
+ln .Brewfile ~/.Brewfile
