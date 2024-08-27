@@ -13,6 +13,9 @@ if [ "$(uname -m)" = "arm64" ]; then
     && echo 'export MODULAR_HOME="'$HOME'/.modular"' >> "$BASHRC" \
     && echo 'export PATH="'$MOJO_PATH'/bin:$PATH"' >> "$BASHRC" \
     && source "$BASHRC"
+
+  alias python="python3"
+
 else
 
   eval "$(/usr/local/bin/brew shellenv)"
