@@ -8,14 +8,10 @@ if [ "$(uname -m)" = "arm64" ]; then
   eval "$(pyenv init -)"
   export HOMEBREW_NO_INSTALL_CLEANUP=FALSE
 
-  MOJO_PATH=$(modular config mojo.path) \
-    && BASHRC=$( [ -f "$HOME/.bash_profile" ] && echo "$HOME/.bash_profile" || echo "$HOME/.bashrc" ) \
-    && echo 'export MODULAR_HOME="'$HOME'/.modular"' >> "$BASHRC" \
-    && echo 'export PATH="'$MOJO_PATH'/bin:$PATH"' >> "$BASHRC" \
-    && source "$BASHRC"
-
   alias python="python3"
 
+  #flutterSDK
+  export PATH=$HOME/prg/flutter/flutter/bin:$PATH
 else
 
   eval "$(/usr/local/bin/brew shellenv)"
@@ -24,3 +20,4 @@ fi
 
 
 
+export PATH="$PATH:/Users/sakabekazuto/.modular/bin"
